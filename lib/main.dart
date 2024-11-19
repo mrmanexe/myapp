@@ -1,3 +1,5 @@
+//testing
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +16,50 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
-        //
+        //// Suggested code may be subject to a license. Learn more: ~LicenseLog:2950672648.
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Sleep Quality Assessment',
+      theme: ThemeData(
+        primarySwatch: Colors.pink, // Use a pink theme
+      ),
+      home: SleepAssessment(),
+    );
+  }
+}
+
+class SleepAssessment extends StatefulWidget {
+  @override
+  _SleepAssessmentState createState() => _SleepAssessmentState();
+}
+
+class _SleepAssessmentState extends State<SleepAssessment> {
+  int _totalScore = 0;
+  bool _showResult = false;
+
+  // ... (rest of the state variables and functions similar to JS)
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('How Well Are You Sleeping?'),
+        backgroundColor: Color(0xFFFF6F61), // Soft coral color
+      ),
+      body: _showResult ? _buildResult() : _buildForm(),
+    );
+  }
+
+  // ... (_buildForm and _buildResult functions to create UI)
+}
+
         // TRY THIS: Try running your application with "flutter run". You'll see
         // the application has a purple toolbar. Then, without quitting the app,
         // try changing the seedColor in the colorScheme below to Colors.green
@@ -122,4 +167,5 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+  
 }
